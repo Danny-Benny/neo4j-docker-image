@@ -23,3 +23,6 @@ org.neo4j.bolt.protocol.error.streaming.BoltStreamingWriteException: Failed to t
 	at java.lang.Thread.run(Thread.java:840) [?:?]
 Caused by: io.netty.channel.StacklessClosedChannelException
 	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source) ~[netty-transport-4.1.100.Final.jar:4.1.100.Final]
+2023-12-08 07:44:11.246+0000 INFO  Neo4j Server shutdown initiated by request
+2023-12-08 07:44:11.246+0000 INFO  Stopping...
+2023-12-08 07:44:16.420+0000 INFO  Stopped.
