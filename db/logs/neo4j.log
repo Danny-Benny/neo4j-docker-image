@@ -1,0 +1,25 @@
+2023-12-08 07:18:18.669+0000 INFO  Logging config in use: Embedded default config 'default-user-logs.xml'
+2023-12-08 07:18:18.672+0000 INFO  Starting...
+2023-12-08 07:18:19.062+0000 INFO  This instance is ServerId{aee00ff4} (aee00ff4-c9f5-479a-9e84-4c964f0356d2)
+2023-12-08 07:18:19.368+0000 INFO  ======== Neo4j 5.14.0 ========
+2023-12-08 07:18:20.355+0000 INFO  Bolt enabled on 0.0.0.0:7687.
+2023-12-08 07:18:20.660+0000 INFO  HTTP enabled on 0.0.0.0:7474.
+2023-12-08 07:18:20.661+0000 INFO  Remote interface available at http://localhost:7474/
+2023-12-08 07:18:20.662+0000 INFO  id: 019E306C4DCA960ECCE500A18E8E3602BCCA7EF78FF5BFEB221A8C8177EFF18B
+2023-12-08 07:18:20.663+0000 INFO  name: system
+2023-12-08 07:18:20.663+0000 INFO  creationDate: 2023-12-08T07:18:19.649Z
+2023-12-08 07:18:20.664+0000 INFO  Started.
+2023-12-08 07:35:29.105+0000 WARN  [bolt-1] Terminating connection due to network error
+org.neo4j.bolt.protocol.error.streaming.BoltStreamingWriteException: Failed to transmit operation result: Response write failure
+	at org.neo4j.bolt.protocol.common.fsm.response.NetworkResponseHandler.onSuccess(NetworkResponseHandler.java:184) ~[neo4j-bolt-5.14.0.jar:5.14.0]
+	at org.neo4j.bolt.protocol.common.connector.connection.AtomicSchedulingConnection.lambda$interrupt$6(AtomicSchedulingConnection.java:462) ~[neo4j-bolt-5.14.0.jar:5.14.0]
+	at org.neo4j.bolt.protocol.common.connector.connection.AtomicSchedulingConnection.executeJob(AtomicSchedulingConnection.java:336) ~[neo4j-bolt-5.14.0.jar:5.14.0]
+	at org.neo4j.bolt.protocol.common.connector.connection.AtomicSchedulingConnection.doExecuteJobs(AtomicSchedulingConnection.java:315) ~[neo4j-bolt-5.14.0.jar:5.14.0]
+	at org.neo4j.bolt.protocol.common.connector.connection.AtomicSchedulingConnection.executeJobs(AtomicSchedulingConnection.java:221) ~[neo4j-bolt-5.14.0.jar:5.14.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:840) [?:?]
+Caused by: io.netty.channel.StacklessClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(Object, ChannelPromise)(Unknown Source) ~[netty-transport-4.1.100.Final.jar:4.1.100.Final]
